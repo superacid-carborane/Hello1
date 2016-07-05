@@ -9,6 +9,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func looper(num int64, i int64) string {
@@ -16,6 +17,7 @@ func looper(num int64, i int64) string {
 	case i == num:
 		return "Time's up! \n"
 	case i != num:
+		time.Sleep(1000 * time.Millisecond)
 		fmt.Println(i + 1)
 		i += 1
 		looper(num, i)
