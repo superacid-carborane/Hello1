@@ -22,7 +22,8 @@ func looper(num int64, i int64) string {
 		i += 1
 		looper(num, i)
 	}
-	return ""
+	time.Sleep(500 * time.Millisecond)
+	return "Time's up! \n"
 }
 
 func main() {
