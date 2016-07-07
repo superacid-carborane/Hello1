@@ -1,4 +1,5 @@
 07/04 16:23 changed Filer to write -path to -filename in format specified by -format
-07/05 3:27 Made Conch into a recursive program; time.sleep not yet implemented
-07/05 4:35 Conch's officially a timer!
-07/05 4:41 Prettied up Conch
+07/05 15:27 Made Conch into a recursive program; time.sleep not yet implemented
+07/05 16:35 Conch's officially a timer!
+07/05 16:41 Prettied up Conch
+07/06 19:10 Started work on Human_sim. MAJOR WIP. UNFINISHED.
