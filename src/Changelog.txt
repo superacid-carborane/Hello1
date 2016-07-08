@@ -3,3 +3,4 @@
 07/05 16:35 Conch's officially a timer!
 07/05 16:41 Prettied up Conch
 07/06 19:10 Started work on Human_sim. MAJOR WIP. UNFINISHED.
+07/08 10:54 I'm deciding to .gitignore human_sim. May scrap it.

@@ -13,6 +13,7 @@ src/golang.org/
 src/gopkg.in
 src/honnef.co
 src/sourcegraph.com
+src/Human_sim
 
 *.7z
 *.dmg
