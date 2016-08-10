@@ -4,10 +4,10 @@ import "fmt"
 
 func mergesort(m []int) []int {
 	fmt.Println(m)
-	if (len(m)) < 2 {
+	if len(m) < 2 {
 		return m
 	}
-	middle := (len(m)) / 2
+	middle := len(m) / 2
 	left := m[:middle]
 	right := m[middle:]
 
@@ -16,25 +16,41 @@ func mergesort(m []int) []int {
 	return merge(left, right)
 }
 
-func merge(left []int, right []int) []int {
+func merge(left, right []int) []int {
 	result := make([]int, len(left)+len(right))
-	left_tmp, right_tmp := 0, 0
-	for left_tmp <= len(left)-1 && right_tmp <= len(right)-1 {
-		if left[left_tmp] <= right[right_tmp] {
-			result = append(result, left[left_tmp])
-			fmt.Println(result)
-			left_tmp += 1
-		} else {
-			result = append(result, right[right_tmp])
-			fmt.Println(result)
-			right_tmp += 1
+	for i := 0; i < len(result); i++ {
+		for i < len(left) && i < len(right) {
+			if i < len(left) && i < len(right) {
+				if left[i] < right[i] {
+					result = append(result, left[i])
+					//fmt.Println(result)
+					i++
+					fmt.Println(i)
+				} else {
+					result = append(result, right[i])
+					//fmt.Println(result)
+					i++
+					fmt.Println(i)
+				}
+			} else if left[i] < right[i] {
+				result = append(result, left[i])
+				//fmt.Println(result)
+				i++
+				fmt.Println(i)
+			} else if right[i] < left[i] {
+				result = append(result, right[i])
+				//fmt.Println(result)
+				fmt.Println(i)
+				i++
+			} else {
+				break
+			}
 		}
 	}
 	return result
 }
 
 func main() {
-	test_slice := []int{1, 2, 6, 8, 3, 9, 11, 22, 4, 36}
-	fmt.Println(test_slice)
+	test_slice := []int{2, 1, 6, 8, 3, 9, 11, 22}
 	fmt.Println(mergesort(test_slice))
 }
