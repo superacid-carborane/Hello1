@@ -14,6 +14,10 @@ src/gopkg.in
 src/honnef.co
 src/sourcegraph.com
 src/Human_sim
+src/Mergesort
+src/plot
+src/OCW_problems
+src/bitbucket.org
 
 *.7z
 *.dmg
